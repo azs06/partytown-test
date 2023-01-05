@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="text/partytown">
+      console.log('execution start');
+      let i = 99999;
+      while(i --){
+        console.count('count');
+      }
+      console.log('execution complete!!')
+      document.body.appendChild(document.createTextNode("Copyright 2023"))
+    </script>
+    <script type="module" src="/main.js"></script>
+    <script>
+      partytown = {
+        forward: ['dataLayer.push']
+      }
+    </script>
+    <script type="module">
+      import { partytownSnippet } from '@builder.io/partytown/integration';
+      const snippetText = partytownSnippet();
+      const el = document.createElement('script');
+      el.innerText = snippetText;
+      document.body.appendChild(el);
+    </script>
+  </body>
+</html>
